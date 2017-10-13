@@ -45,7 +45,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/images/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">A_si</a></h1>
@@ -105,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/images/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">A_si</h1>
@@ -181,17 +181,10 @@
         <h4 id="java代码里，经常要对方法的返回值的判空，举例如下："><a href="#java代码里，经常要对方法的返回值的判空，举例如下：" class="headerlink" title="java代码里，经常要对方法的返回值的判空，举例如下："></a>java代码里，经常要对方法的返回值的判空，举例如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">static  String getName()&#123;</div><div class="line">    return &quot;xiaoming&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public static void main(String[] args) &#123;</div><div class="line">String name = getName();</div><div class="line">System.out.println(name.length());</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果retrun的值是null，就会空指针异常。所以我们要判断这个name：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">    String name = getName();</div><div class="line">    if (null!=name)&#123;</div><div class="line">    System.out.println(name.length());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>或者值为空时return。都比较繁琐，而kotlin的空安全特性恰好解决了这个问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fun getName():String&#123;</div><div class="line">    return null</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这个时候就会编译报错会提示String是不可为null的类型。所以调用getName方法，就不需要判空。因为永远getName永远不为null。如果返回可以为null的类型呢：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fun getName(): String?&#123;</div><div class="line">    return null</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意String后面加了一个？。代表可以为null。<br>这个时候要判断是否为空，十分简单：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(name?.length)</div></pre></td></tr></table></figure>
-<p>意思就是如果为空，就返回null，不为空就打印length。<br>如果为空retrun，问号后面跟个冒号：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">val name: String = getName()?:return</div></pre></td></tr></table></figure>
-<p>如果可以为空的实例，但是你确定返回值是安全的，不需要判断，那么实例后面跟2个感叹号：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val name:String?=&quot;xiaoming&quot;</div><div class="line">print(name!!.length)</div></pre></td></tr></table></figure>
-
+<p>或者值为空时return。都比较繁琐。</p>
+        
+          <a class="article-more-a" href="/2017/09/13/Kotlin学习——判空/#more">more >></a>
+        
       
 
       
@@ -269,19 +262,11 @@
 </blockquote>
 <p>　　<br>小三说，他恨自己九四年的时候还是个孩子。</p>
 <p>一九九四年，香港红勘演唱会。中国摇滚乐势力。何勇说，四大天王里除了张学友都是小丑。何勇用北京话向香港的观众问好：吃了吗？！张楚穿着格子衬衣静静的唱着爱情的寂寞。张楚乖乖的问香港的观众：你们准备好了吗？窦唯穿着西装唱着悲伤的梦，唱着高级动物。他自言自语：幸福在哪里……他唱噢乖的时候忘词了，我确定。</p>
-<p> 一九九四年。丁武结结巴巴的要和香港的观众交上朋友。丁武还是结结巴巴的要香港的观众和他们唐朝乐队一起成为一只飞翔的鸟。丁武的头发被风吹起，男友说他这样像个老巫婆。 </p>
-<p>张培仁说，这是一个时代的开始。<br>二零零四年的小三的理想停留在一九九四年。<br>　　<br>一九九五年，飘来飘去飘来飘去没有尽头。<br>来吧，让我们有一点悲哀，不要太多。<br>这不是纪念的年代。不是纪念，只是有点难过。<br>小三说，一九九五年真够操蛋的！ </p>
-<p>张炬走了。没和任何人打招呼。那些成天喊着痛苦的人至今活得比谁都健康。爱笑的张炬走的无声无息。科本死后什么都不是摇滚。科本死后什么都是摇滚。科本在遗书里说：这个世界上的人太容易友好，有着太多的同情。可我从很小的时候就开始仇视人类。科本不是一九九五年死的。一九九五年死了很多人。每一年都会死很多人。我只记住了一九九五年。只记住了在一九九五年死去的张炬。<br>丁武说，我们可以半年就出一张唱片，但我们不能这样做。我们要对自己负责。 .<br>小三说，我听着《梦回唐朝》等着唐朝出来一张对自己负责的唱片。可是，《演义》，就是《演义》，你说它能听吗？我说能。小三说，我就这么等着。<br>小三说，没了张炬的唐朝真的只能飘来飘去吗？没有尽头？<br>小三说，没了张炬的唐朝还好意思让我们和他们一起成为一只飞翔的鸟吗？<br>小三说，吸毒的丁武，沉默的赵年，飘忽不定的老五。唐朝还在吗？<br>小三的悲哀生长在一九九五年。 </p>
-<p>一九九六年，于是我向前。<br>来吧，让我们摇滚吧！这是个超载的年代。<br>一九九六年。超载乐队发行第一张专辑《超载》。<br>小三说：OVERLOAD!OVERLOAD!我看到他的两眼放光。<br>如果这块土地是片荒凉，那么你将听见人类超载的梦想。释放亘古以来天地间所有力量，进入这个灼热的末世纪。这是《超载》歌词首页的话。 |<br>那么，一九九六年，让我们和他们一起超载。<br>　<br>小三说，那时的天是灰的，可我觉得爽。一瞬间，似乎有了快感。<br>　　<br>我的一九九七，快点到吧，我可以去香港啦。 ,<br>那一年我知道了一个男人：董建华。后来出现在明星三缺一里，神情猥琐的偷看别人的牌。那一年风风火火，轰轰烈烈。<br>来吧，让我们欢歌吧。因为去香港不用那么麻烦了。<br>那一年，伟大的邓小平同志没有等到7月。那一年的大年初二，小三在刷牙的时候听到了哀乐。那一年，邓小平去世。<br>那一年，我学会了几首粤语歌。<br>那一年许巍发行《在别处》，小三跟着许巍一起幻想。<br>那一年，《再见张炬》。再见，张炬。 </p>
-<p>相约九八。相约酒吧。<br>从九八年开始，小三流连于三里屯的各个酒吧。穿梭往返，乐此不疲。<br>小三说，子曰是什么？<br>我说，是相声吧？<br>小三说，相声是门语言艺术，子曰是什么？<br>我不知道崔健为什么在当年猛夸子曰。子曰的歌连起码的好听都没有。这一点连零点都不如。这一年，崔健在发行《无能的力量》之后，开始彻底无能。辉煌之后的崔健更像是个思想家。可谁都知道，他只是一个摇滚音乐人。他玩思想玩不过任何人。崔健有些歇斯底里。<br>九八年，罗琦吸毒。<br>冬天，我和男友在街头迎着寒风大声说：我爱你。<br>冬天， 我和朋友听着何勇的《垃圾场》，唾骂这个操蛋的世界。然后面无表情回家。<br>小三说，如果这个世界是有着永恒，请赐予我一个女人，让我好好的爱，好好的爱。<br>小三说，如果这个世界根本没有永恒，请让我摇滚吧，让我往死里摇，摇完就滚。<br>那一年，第一次听到子曰。我知道，摇滚也可以做的很难听。<br>小三说，我睁开眼，看到满世界的雾，湿乎乎的。<br>小三说，观音姐姐是男的还是女的？<br>小三说，是不是真有上帝。 </p>
-<p>一九九六年，小三依然是个孩子。每天喊着风吹过，或是于是我向前……<br>这一年，高旗，超载乐队主唱。这个很多年都是一米七二的男人有着一张阴柔的脸。这一年，高旗被众多乐评人骂的狗血喷头，骂的一文不值。够本了！高旗在这一年得到了这一辈子的辱骂和批判。后来高旗说，别提王晓峰，谁都别挤兑谁。后来，小三买了一本王晓峰的《不是我点的火》。看完以后，小三说，我想先抽丫一嘴巴，然后说，就是你点的火，就是你！就是你！就是你！后来，小三超载着向前，后来，到了一九九七年。<br>　　<br>一九九九，在招手。<br>一九九九刚到，我就听到了摇滚乐中最稚嫩的声音。花儿首张专辑《幸福的旁边》发行。我只听了一遍，就放到抽屉里。这是我所有的唱片里众多珍藏版的一张。我所谓的珍藏，就是放在那儿一年也想不起听的东西。<br>一九九九在招手，一九九九在引诱。<br>小三说，我别无选择了。<br>九九年，我抽烟愈发猛烈，我穿破的仔裤，开始写作。<br>那一年，超载发行《魔幻蓝天》。<br>魔幻的蓝天永远驱散那黑暗……<br>小三说，我应该相信吧。我别无选择了。<br>那一年，我听唐朝 </p>
-<p>二零零零。Don’t break my heart!<br>两根棍儿和三个蛋的年代。<br>小三说，给我两根棍儿。一根用来戳瞎你的眼，一根用来指点江山。<br>北京是个伟大的地方，北京是个恶心的地方。<br>这个埋葬我梦想和爱情的地方。<br>小三失恋。<br>小三说，初次失恋，没什么经验，多多包涵。<br>夜晚，小三唱着交个女朋友，还是养条狗。<br>他喝了11瓶啤酒，在天桥下睡了一夜，醒来的时候，一个乞丐看着他，义正言辞的说：你丫抢我地盘了！小三屁都没放一个就走了。<br>小三说，我胃疼的时候，能不能像科本一样，借吸毒减少痛苦。<br>我说，香蕉大，香蕉皮更大。<br>4月5日，小三听Nirvana，纪念科本。<br>5月11日，小三听唐朝，纪念张炬。<br>二零零零年，小三失恋之后突然沉默。<br>灰的天，灰的云，灰的人，灰的心。<br>　　<br>只愿面朝大海，春暖花开。<br>　　<br>二零零一年，晚安北京.<br>那年，突然冒出了很多用下半身写作的人。我看着自己苍白的文字，再看她们火辣辣的文字，脸上一阵热。这些文字有一个通性：一定要和乐队里的谁谁做过爱，男人射精的时候，女人一定要想到些什么。恨不得把整个世界都看成是个生殖器。<br>那一年，我经常在半夜的时候听<br>小三说，我离摇滚越来越远了。<br>那一年，你正年轻，总觉得明天肯定会很美……<br>小三说，来，喝酒吧，快乐一点，快乐一点。<br>年轻的时候，我很天真，但不傻。<br>长大以后，我很傻，但不天真。<br>夜晚的北京，慈祥如我的母亲。<br>晚安，北京。 </p>
-<p>二零零二年，三大不留点欧哇漏的点卡目点西恩。<br>小三说，大家都上网了，还哪有人打鱼了？<br>我说，大家都听MP3了，还哪有人买正版CD了<br>小三说，人们都当妓女了，还那有人从良了？<br>我说，没人当妓女，哪有人从良？<br>　　<br>小三说，加入我们的节奏好吗？<br>我说，让我们一起成为一只飞翔的鸟儿！<br>小三说，所有的人让我看到你们所有的手。<br>我说，你们准备好了吗？<br>这不是个摇滚的年代。这是个哼哼哈嘿的年代。<br>来吃一口梦做的晚餐，把世界放在胃里化成血。<br>小三说，我想梦回唐朝。<br>我说，我觉得自己超载了。<br>小三说，我似乎看到那个裤管一高一低的崔健，那个意气风发，说着别想把黑暗放在我的面前，太阳已生长在我心底的丁武，那个人群驱散，只有我一人还在高声喊的高旗，那个没有远方的罗琦，那个愤怒的唱着《逼上梁山》的陈劲……<br>黑夜给了我黑色的眼睛，我却用他寻找光明。<br>黑色的雾遮住了我流泪的双眼。我看不清这个世界。 </p>
-<p>二零零三年，想采访我，先跟我上床吧！<br>那个冬天，我觉得冷，因为，我穿的很少。因为我穿的少，所以，我觉得清醒。<br>二零零三年真正的明星是杨立伟。<br>二零零三年真正的明星是木子美。<br>二零零三年真正的明星是小布什和萨达姆。<br>二零零三年真正的明星是拉登。 </p>
-<p>晚安，北京。属于汪峰的经典。<br>烽火扬州路。属于轮回的经典。<br>祖先的阴影。属于超载的经典。<br>无地自容。属于黑豹的经典。<br>梦回唐朝。属于唐朝的经典。<br>非典型肺炎。属于二零零三的北京。<br>非典型的经典。 </p>
-<p>那一年，小三剪断了长发。 </p>
-<p>二零零四。我要抚摸你。<br>小三说，请赐予我一地荒凉，让我在上面尽情摇滚</p>
-
+<p> 一九九四年。丁武结结巴巴的要和香港的观众交上朋友。丁武还是结结巴巴的要香港的观众和他们唐朝乐队一起成为一只飞翔的鸟。丁武的头发被风吹起，小三说他这样像个老巫婆。 </p>
+<p>张培仁说，这是一个时代的开始。<br>二零零四年的小三的理想停留在一九九四年。<br>　　<br>
+        
+          <a class="article-more-a" href="/2004/10/13/2017-10/#more">more >></a>
+        
       
 
       
@@ -438,11 +423,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">kotlin</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">kotlin</a>
               </li>
             
             <div class="clearfix"></div>
