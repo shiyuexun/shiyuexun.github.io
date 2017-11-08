@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: kotlin | A_si的博客</title>
+  <title>Kotlin学习-常用高阶函数 | A_si的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android dev">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A_si的博客">
-<meta property="og:url" content="http://yoursite.com/tags/kotlin/index.html">
+  <meta name="description" content="map-&amp;gt;一个集合改变元素后生成另外一个集合 比如一张工资表，每人工资补贴10块高温费。Java写法遍历然后添加，而Kotlin简洁多了：    123val form = listOf(1,2,3,4,5)  val newForm =  form.map &amp;#123; it+10 &amp;#125; map函数的签名是变换T类型返回一个R类型集合：">
+<meta name="keywords" content="kotlin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin学习-常用高阶函数">
+<meta property="og:url" content="http://yoursite.com/2017/11/09/Kotlin学习-常用高阶函数/index.html">
 <meta property="og:site_name" content="A_si的博客">
-<meta property="og:description" content="Android dev">
+<meta property="og:description" content="map-&amp;gt;一个集合改变元素后生成另外一个集合 比如一张工资表，每人工资补贴10块高温费。Java写法遍历然后添加，而Kotlin简洁多了：    123val form = listOf(1,2,3,4,5)  val newForm =  form.map &amp;#123; it+10 &amp;#125; map函数的签名是变换T类型返回一个R类型集合：">
+<meta property="og:updated_time" content="2017-11-08T16:36:15.331Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A_si的博客">
-<meta name="twitter:description" content="Android dev">
+<meta name="twitter:title" content="Kotlin学习-常用高阶函数">
+<meta name="twitter:description" content="map-&amp;gt;一个集合改变元素后生成另外一个集合 比如一张工资表，每人工资补贴10块高温费。Java写法遍历然后添加，而Kotlin简洁多了：    123val form = listOf(1,2,3,4,5)  val newForm =  form.map &amp;#123; it+10 &amp;#125; map函数的签名是变换T类型返回一个R类型集合：">
   
     <link rel="alternative" href="/atom.xml" title="A_si的博客" type="application/atom+xml">
   
@@ -156,36 +158,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Kotlin学习-常用高阶函数" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Kotlin学习-常用高阶函数
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/09/Kotlin学习-常用高阶函数/" class="archive-article-date">
+
+        
+        <a href="/2017/11/09/Kotlin学习-常用高阶函数/" class="archive-article-date">
   	<time datetime="2017-11-08T16:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/09/Kotlin学习-常用高阶函数/">Kotlin学习-常用高阶函数</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h6 id="map-gt-一个集合改变元素后生成另外一个集合"><a href="#map-gt-一个集合改变元素后生成另外一个集合" class="headerlink" title="map-&gt;一个集合改变元素后生成另外一个集合"></a>map-&gt;一个集合改变元素后生成另外一个集合</h6><blockquote>
+<p>比如一张工资表，每人工资补贴10块高温费。Java写法遍历然后添加，而Kotlin简洁多了：</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val form = listOf(1,2,3,4,5)</div><div class="line"></div><div class="line">  val newForm =  form.map &#123; it+10 &#125;</div></pre></td></tr></table></figure>
+<p>map函数的签名是变换T类型返回一个R类型集合：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public inline fun &lt;T, R&gt; Iterable&lt;T&gt;.map(transform: (T) -&gt; R): List&lt;R&gt; &#123;</div><div class="line">    return mapTo(ArrayList&lt;R&gt;(collectionSizeOrDefault(10)), transform)</div><div class="line">&#125;</div><div class="line"></div><div class="line">public inline fun &lt;T, R, C : MutableCollection&lt;in R&gt;&gt; Iterable&lt;T&gt;.mapTo(destination: C, transform: (T) -&gt; R): C &#123;</div><div class="line">    for (item in this)</div><div class="line">        destination.add(transform(item))</div><div class="line">    return destination</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>首先看mapto函数签名，第一个参数是C-目标集合，然后是一个表达式将T类型的transform变换成R类型，函数的返回值是C。函数里是遍历原始集合，然后遍历的元素通过transform表达式变换，添加到目标集合C中。<br>而map函数的签名就是传入一个表达式，对表达式不太懂的可能看不明白。其分解如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">form.map (&#123; it -&gt;  it+10 &#125;) //&#123; it -&gt;  it+10 &#125;就是transform: (T) -&gt; R</div><div class="line">form.map (&#123; transform: Int -&gt;  transform+10 &#125;) //这样应该明白了吧</div></pre></td></tr></table></figure>
+<p>map函数retrun 的mapto函数，第一个参数就是一个新的集合实例，第二个就是这个表达式，如果还不懂，将这个表达式写成普通函数params：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">fun   params(  transform: Int      ): Int&#123;</div><div class="line">    return transform+10</div><div class="line">&#125;</div><div class="line"></div><div class="line">public inline fun &lt;T, R&gt; Iterable&lt;T&gt;.map( params(transform:Int) ): List&lt;R&gt; &#123;</div><div class="line">    return mapTo(ArrayList&lt;R&gt;(collectionSizeOrDefault(10)),params(transform:Int))</div><div class="line">&#125;</div><div class="line"></div><div class="line">public inline fun &lt;T, R, C : MutableCollection&lt;in R&gt;&gt; Iterable&lt;T&gt;.mapTo(destination: C,params(transform:Int)): C &#123;</div><div class="line">    for (item in this)</div><div class="line">        destination.add(params(item))</div><div class="line">    return destination</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后在map这里调用这个params函数，传给mapto。mapto里面，遍历的时候，把item传给这个params函数。</p>
+<ul>
+<li><h6 id="reduce-gt-求和-阶层"><a href="#reduce-gt-求和-阶层" class="headerlink" title="reduce-&gt;求和,阶层"></a>reduce-&gt;求和,阶层</h6>上面工资表添加完了高温补贴，然后要算下一共支出多少，Java是遍历相加，Kotlin当然要智能了：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">newForm.reduce &#123; acc, i -&gt; acc+i &#125;</div></pre></td></tr></table></figure>
+<p>看下reduce的实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public inline fun &lt;S, T: S&gt; Iterable&lt;T&gt;.reduce(operation: (acc: S, T) -&gt; S): S &#123;</div><div class="line">    val iterator = this.iterator()</div><div class="line">    if (!iterator.hasNext()) throw UnsupportedOperationException(&quot;Empty collection can&apos;t be reduced.&quot;)</div><div class="line">    var accumulator: S = iterator.next()</div><div class="line">    while (iterator.hasNext()) &#123;</div><div class="line">        accumulator = operation(accumulator, iterator.next())</div><div class="line">    &#125;</div><div class="line">    return accumulator</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>acc第一次是集合的第一个元素。i是第二个元素。然后operation表达式传入acc和i。然后acc等于这个operation表达式的返回值。继续循环。。。<br>那阶层怎么写呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">val  mulList = listOf(1,2,3，4)</div><div class="line">val mul = mulList.reduce &#123; acc, i -&gt; acc * i &#125;</div><div class="line"></div><div class="line">print(mul)</div></pre></td></tr></table></figure>
+<p>acc第一次等于1，i等于2.然后acc <em> i = 1 </em> 2=2，这个结果赋值给acc。acc=2.然后i=3,acc <em> i=2 </em> 3=6,然后赋值给acc=6.然后i=4,acc <em> i=6</em>4=24.</p>
+<ul>
+<li><h6 id="fold-添加初始值，变换类型"><a href="#fold-添加初始值，变换类型" class="headerlink" title="fold-添加初始值，变换类型"></a>fold-添加初始值，变换类型</h6>公司除了发工资，还要支出100的房租。所以：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val  money = listOf(1,2,3)</div><div class="line">val sb= StringBuilder(&quot;$&quot;)</div><div class="line">val fold = money.fold(sb) &#123; acc, i -&gt; acc.append(i) &#125;</div></pre></td></tr></table></figure>
+<p>fold第一个参数是acc初始值。i是集合第一个元素。</p>
+<ul>
+<li><h6 id="joinToString-使用分隔符使集合所有元素分离-可以使用给定的-前缀-和-后缀"><a href="#joinToString-使用分隔符使集合所有元素分离-可以使用给定的-前缀-和-后缀" class="headerlink" title="joinToString-使用分隔符使集合所有元素分离,可以使用给定的(前缀)和(后缀)"></a>joinToString-使用分隔符使集合所有元素分离,可以使用给定的(前缀)和(后缀)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> val  money = listOf(1,2,3)</div><div class="line"></div><div class="line">print(money.joinToString(&quot;==&quot;))</div><div class="line">print( money.joinToString &#123; &quot;== $it&quot; &#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><h6 id="filter-过滤符合条件的元素"><a href="#filter-过滤符合条件的元素" class="headerlink" title="filter-过滤符合条件的元素"></a>filter-过滤符合条件的元素</h6></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val  money = listOf(1,2,3)</div><div class="line"></div><div class="line">money.filter &#123; it==2 &#125;.forEach(::print) //2</div></pre></td></tr></table></figure>
+<ul>
+<li><h6 id="takeWhile-从第一个元素开始过滤，遇到不符合条件的元素即退出。"><a href="#takeWhile-从第一个元素开始过滤，遇到不符合条件的元素即退出。" class="headerlink" title="takeWhile-从第一个元素开始过滤，遇到不符合条件的元素即退出。"></a>takeWhile-从第一个元素开始过滤，遇到不符合条件的元素即退出。</h6></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val  money = listOf(1,2,3,4,5,6)</div><div class="line"></div><div class="line">money.takeWhile &#123; it&lt;5 &#125;.forEach(::print)</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,57 +256,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/09/Kotlin学习-常用高阶函数/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/13/Kotlin学习——判空/" class="archive-article-date">
-  	<time datetime="2017-09-13T15:43:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/13/Kotlin学习——判空/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kotlin学习——判空</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/13/Kotlin学习——判空/">Kotlin学习——判空</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">kotlin</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -270,9 +378,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
