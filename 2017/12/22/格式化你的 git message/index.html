@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/11 | A_si的博客</title>
+  <title>格式化你的 git message | A_si的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android dev">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A_si的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+  <meta name="description" content="1.1 缘由 重建一段代码的上下文是一种浪费。我们不能完全避免，我们只能努力尽最大可能去减少它。提交的信息就可以做到这一点，以至于一个提交信息可以表明一个开发者是不是一个好的合作者。  如果你对如何写好 git 提交信息没有仔细想过，那你很可能没有怎么使用过 git log 和相关工具。这里有一个恶性循环：因为提交的历史信息组织混乱而且前后矛盾，那后面的人也就不愿意花时间去使用和维护它。 又因为没">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格式化你的 git message">
+<meta property="og:url" content="http://yoursite.com/2017/12/22/格式化你的 git message/index.html">
 <meta property="og:site_name" content="A_si的博客">
-<meta property="og:description" content="Android dev">
+<meta property="og:description" content="1.1 缘由 重建一段代码的上下文是一种浪费。我们不能完全避免，我们只能努力尽最大可能去减少它。提交的信息就可以做到这一点，以至于一个提交信息可以表明一个开发者是不是一个好的合作者。  如果你对如何写好 git 提交信息没有仔细想过，那你很可能没有怎么使用过 git log 和相关工具。这里有一个恶性循环：因为提交的历史信息组织混乱而且前后矛盾，那后面的人也就不愿意花时间去使用和维护它。 又因为没">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-63338cf4931c46e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-30T17:13:55.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A_si的博客">
-<meta name="twitter:description" content="Android dev">
+<meta name="twitter:title" content="格式化你的 git message">
+<meta name="twitter:description" content="1.1 缘由 重建一段代码的上下文是一种浪费。我们不能完全避免，我们只能努力尽最大可能去减少它。提交的信息就可以做到这一点，以至于一个提交信息可以表明一个开发者是不是一个好的合作者。  如果你对如何写好 git 提交信息没有仔细想过，那你很可能没有怎么使用过 git log 和相关工具。这里有一个恶性循环：因为提交的历史信息组织混乱而且前后矛盾，那后面的人也就不愿意花时间去使用和维护它。 又因为没">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1454742-63338cf4931c46e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="A_si的博客" type="application/atom+xml">
   
@@ -156,60 +160,256 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-格式化你的 git message" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/09/Kotlin学习-常用高阶函数/" class="archive-article-date">
-  	<time datetime="2017-11-08T16:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/09/Kotlin学习-常用高阶函数/">Kotlin学习-常用高阶函数</a>
+    <h1 class="article-title" itemprop="name">
+      格式化你的 git message
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/12/22/格式化你的 git message/" class="archive-article-date">
+  	<time datetime="2017-12-22T14:33:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-1-缘由"><a href="#1-1-缘由" class="headerlink" title="1.1 缘由"></a>1.1 缘由</h3><blockquote>
+<p>重建一段代码的上下文是一种浪费。我们不能完全避免，我们只能努力尽最大可能去减少它。提交的信息就可以做到这一点，以至于一个提交信息可以表明一个开发者是不是一个好的合作者。</p>
+</blockquote>
+<p>如果你对如何写好 git 提交信息没有仔细想过，那你很可能没有怎么使用过 git log 和相关工具。这里有一个恶性循环：因为提交的历史信息组织混乱而且前后矛盾，那后面的人也就不愿意花时间去使用和维护它。 又因为没有人去使用和维护它，提交的信息就会一直组织混乱和前后矛盾。 </p>
+<p>&lt; !–more–&gt;</p>
+<h3 id="1-2-作用"><a href="#1-2-作用" class="headerlink" title="1.2 作用"></a>1.2 作用</h3><ul>
+<li>提供更多的历史信息，方便快速浏览。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。</div><div class="line">git log &lt;last tag&gt; HEAD --pretty=format:%s</div></pre></td></tr></table></figure>
+<ul>
+<li>可以过滤某些commit（比如文档改动），便于快速查找信息。</li>
+<li>可以直接从commit生成Change log。</li>
+</ul>
+<h3 id="1-2-目的"><a href="#1-2-目的" class="headerlink" title="1.2 目的"></a>1.2 目的</h3><p>统一团队git commit 团队日志标准，便于后续代码review和发布版本 </p>
+<h3 id="2-规范"><a href="#2-规范" class="headerlink" title="2 规范"></a>2 规范</h3><p>基于使用最广泛的<a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w" target="_blank" rel="external">angular</a>日志规范<br>。<br>分为三部分：标题、内容、结尾，其中，==标题==是==必需==的，内容无需过多描述的话，正文内容部分可以省略。</p>
+<p>不管是哪一个部分，任何。一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;类型&gt;(范围): &lt;主题&gt;</div><div class="line">// 空一行</div><div class="line">&lt;内容&gt;</div><div class="line">// 空一行</div><div class="line">&lt;Footer&gt;</div></pre></td></tr></table></figure>
+<h4 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h4><ol>
+<li>标题部分只有一行，包括字段：类型 和 主题。</li>
+<li><p>标题限制总字数在50个字符以内，以保证容易阅读。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">feat: init LearnGit.git</div><div class="line"></div><div class="line">I got a wrong-style git commit, so I init a .git for learning</div><div class="line">how to write a git commit message in right way.</div><div class="line"></div><div class="line">And the last line just write here for a simple test,</div><div class="line">it&apos;s useless acturally.</div></pre></td></tr></table></figure>
+<h6 id="2-1-1-类型"><a href="#2-1-1-类型" class="headerlink" title="2.1.1 类型"></a>2.1.1 类型</h6></li>
+</ol>
+<p>类型用于说明 commit 的类别，只允许使用下面7个标识。</p>
+<ul>
+<li>init：项目初始化（用于项目初始化或其他某种行为的开始描述，不影响代码）</li>
+<li>feat：新功能（feature）</li>
+<li>fix：修补bug</li>
+<li>docs：文档（documentation）</li>
+<li>opt：优化和改善，比如弹窗进行确认提示等相关的，不会改动逻辑和具体功能等</li>
+<li>style： 格式（不影响代码运行的变动）</li>
+<li>refactor：重构（即不是新增功能，也不是修改bug的代码变动）</li>
+<li>test：增加测试</li>
+<li><p>other：用于难以分类的类别（不建议使用，但一些如删除不必要的文件，更新.ignore之类的可以使用） </p>
+<h6 id="2-1-2-范围"><a href="#2-1-2-范围" class="headerlink" title="2.1.2 范围"></a>2.1.2 范围</h6></li>
+</ul>
+<p>类型后面可以加上括号，括号内填写主要变动的范围，比如按功能模块分，某模块；或按项目三层架构模式分，分数据层、控制层之类的。</p>
+<pre><code>     #：表示模块 
+-    #market--&gt; 表示 商城模块 （具体的模块开头字母小写，驼峰命名）
+-    #ALL --&gt; 表示 所有模块 （特殊含义如ALL表所有，MOST表大部分，用大写字母表示）
+-    #MOST --&gt; 表示 大部分模块
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">feat(#market): 新增添商城功能</div></pre></td></tr></table></figure>
+<h6 id="2-1-3-主题"><a href="#2-1-3-主题" class="headerlink" title="2.1.3 主题"></a>2.1.3 主题</h6><p>主题 是 commit 目的的简短描述，不超过50个字符。</p>
+<ul>
+<li>第一个字母小写</li>
+<li>以动词开头</li>
+<li>结尾不加句号</li>
+</ul>
+<h4 id="2-2-内容"><a href="#2-2-内容" class="headerlink" title="2.2 内容"></a>2.2 内容</h4><p>内容部分是对本次 commit 的详细描述，可以分成多行，正文在 72 个字符处换行。 </p>
+<p>使用正文解释是什么(what)和为什么(why)，而不是如何做，以及与以前行为的对比。</p>
+<h4 id="2-3-Footer"><a href="#2-3-Footer" class="headerlink" title="2.3 Footer"></a>2.3 Footer</h4><p>Footer 部分只用于两种情况：</p>
+<ol>
+<li><p>不兼容变动  </p>
+<p> 如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING<br> CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。</p>
+</li>
+<li><p>关闭 Issue</p>
+<p> 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Closes #123, #245, #992</div></pre></td></tr></table></figure>
+<h4 id="2-4-Revert"><a href="#2-4-Revert" class="headerlink" title="2.4 Revert"></a>2.4 Revert</h4><p>还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">revert: feat(pencil): add &apos;graphiteWidth&apos; option</div><div class="line"></div><div class="line">This reverts commit 667ecc1654a317a13331b17617d973392f415f02.</div></pre></td></tr></table></figure>
+<p>Body部分的格式是固定的，必须写成This reverts commit &lt;hash&gt;.，其中的hash是被撤销 commit 的 SHA 标识符。</p>
+<h3 id="3-工具"><a href="#3-工具" class="headerlink" title="3 工具"></a>3 工具</h3><h4 id="3-1-Commitizen"><a href="#3-1-Commitizen" class="headerlink" title="3.1 Commitizen"></a>3.1 <a href="https://github.com/commitizen/cz-cli" target="_blank" rel="external">Commitizen</a></h4><p>Commitizen是一个格式化commit message的工具。通过上面安装好的npm来安装： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g commitizen</div></pre></td></tr></table></figure>
+<p>而我们用的是Angular的commit message规范，那么就在我们项目的目录下输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">commitizen init cz-conventional-changelog --save --save-exact</div></pre></td></tr></table></figure>
+<blockquote>
+<p> 生成package.json文件，有时候这个文件名会错误，需要手动修改文件名。或者： </p>
+<p>先在项目中添加一个空的package.json文件，然后再输入始化配置package.json文件命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; npm init --yes</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>然后输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; commitizen init cz-conventional-changelog --save --save-exact</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>接下来在提交的时候，就用git cz替换git commit命令，会出现提交类型的选择，选择相应类型就好。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-63338cf4931c46e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="commitizen "></p>
+<h4 id="3-2-生成CHANGELOG"><a href="#3-2-生成CHANGELOG" class="headerlink" title="3.2 生成CHANGELOG"></a>3.2 生成CHANGELOG</h4><p><a href="https://github.com/conventional-changelog/conventional-changelog" target="_blank" rel="external">conventional-changelog</a>就是生成 Change log 的工具。</p>
+<p>运行下列命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install -g conventional-changelog</div><div class="line">$ cd my-project</div><div class="line">$ conventional-changelog -p angular -i CHANGELOG.md -w</div></pre></td></tr></table></figure>
+<p>如果最后出现command not found，就要改用conventional-changelog-cli：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install -g conventional-changelog-cli</div><div class="line">$ cd my-project</div><div class="line">$ conventional-changelog -p angular -i CHANGELOG.md -s</div></pre></td></tr></table></figure>
+<p>通过以上命令你就会发现在项目中多了个CHANGELOG.md文件，表示生成 Change log成功了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">kotlin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/22/格式化你的 git message/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/03/31/run, with, let, also and apply傻傻分不清楚/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          run, with, let, also and apply傻傻分不清楚
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/11/09/Kotlin学习-常用高阶函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kotlin学习-常用高阶函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -232,8 +432,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
