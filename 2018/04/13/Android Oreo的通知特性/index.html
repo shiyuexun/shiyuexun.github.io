@@ -6,25 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>run, with, let, also and apply傻傻分不清楚 | A_si的博客</title>
+  <title>Android Oreo的通知特性 | A_si的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="kotlin的一些标准函数十分相似，我们很难根据他们的名字确定使用哪一个函数。“记忆是遗忘的开始”，很多次都弄混淆它们的区别 就比如T.run，T.let，T.also和T.apply。这些也是范围函数，因为它们为调用者提供了内部作用域运行函数。">
-<meta name="keywords" content="kotlin">
+  <meta name="description" content="Android 奥利奥已经推出一年了，去年开发者大会的奥利奥新特性册子上也写到了通知的更改，虽然以往的版本很少有关于通知的改动，但是这次的变化还是很大的，官方文档中也比较突出的描述了。在API26及以上的版本需要适配，不然就收不到通知。我们小组上次的版本就没有注意，被反馈回来才知道没有适配。">
+<meta name="keywords" content="Notification">
 <meta property="og:type" content="article">
-<meta property="og:title" content="run, with, let, also and apply傻傻分不清楚">
-<meta property="og:url" content="http://yoursite.com/2018/03/31/run, with, let, also and apply傻傻分不清楚/index.html">
+<meta property="og:title" content="Android Oreo的通知特性">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/Android Oreo的通知特性/index.html">
 <meta property="og:site_name" content="A_si的博客">
-<meta property="og:description" content="kotlin的一些标准函数十分相似，我们很难根据他们的名字确定使用哪一个函数。“记忆是遗忘的开始”，很多次都弄混淆它们的区别 就比如T.run，T.let，T.also和T.apply。这些也是范围函数，因为它们为调用者提供了内部作用域运行函数。">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-3da93207be27c1e2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-57a0cd7b126e9b9e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-3da93207be27c1e2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-cdd4ae890d58b057.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-4b4537abeb1a8916.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-30T17:02:24.181Z">
+<meta property="og:description" content="Android 奥利奥已经推出一年了，去年开发者大会的奥利奥新特性册子上也写到了通知的更改，虽然以往的版本很少有关于通知的改动，但是这次的变化还是很大的，官方文档中也比较突出的描述了。在API26及以上的版本需要适配，不然就收不到通知。我们小组上次的版本就没有注意，被反馈回来才知道没有适配。">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-07177ac52de9e866.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-16205cbd745e8e82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-e861b244c6718742.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-6f4b4f69b9ab3d61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-48bbce249c5876c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-343d1ded3d432135.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-04-12T19:39:11.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="run, with, let, also and apply傻傻分不清楚">
-<meta name="twitter:description" content="kotlin的一些标准函数十分相似，我们很难根据他们的名字确定使用哪一个函数。“记忆是遗忘的开始”，很多次都弄混淆它们的区别 就比如T.run，T.let，T.also和T.apply。这些也是范围函数，因为它们为调用者提供了内部作用域运行函数。">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1454742-3da93207be27c1e2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Android Oreo的通知特性">
+<meta name="twitter:description" content="Android 奥利奥已经推出一年了，去年开发者大会的奥利奥新特性册子上也写到了通知的更改，虽然以往的版本很少有关于通知的改动，但是这次的变化还是很大的，官方文档中也比较突出的描述了。在API26及以上的版本需要适配，不然就收不到通知。我们小组上次的版本就没有注意，被反馈回来才知道没有适配。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1454742-07177ac52de9e866.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="A_si的博客" type="application/atom+xml">
   
@@ -164,86 +165,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-run, with, let, also and apply傻傻分不清楚" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Android Oreo的通知特性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      run, with, let, also and apply傻傻分不清楚
+      Android Oreo的通知特性
     </h1>
   
 
         
-        <a href="/2018/03/31/run, with, let, also and apply傻傻分不清楚/" class="archive-article-date">
-  	<time datetime="2018-03-30T17:01:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-31</time>
+        <a href="/2018/04/13/Android Oreo的通知特性/" class="archive-article-date">
+  	<time datetime="2018-04-12T19:39:27.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>kotlin的一些标准函数十分相似，我们很难根据他们的名字确定使用哪一个函数。“记忆是遗忘的开始”，很多次都弄混淆它们的区别</p>
-<p>就比如T.run，T.let，T.also和T.apply。这些也是范围函数，因为它们为调用者提供了内部作用域运行函数。</p>
+        <p>Android 奥利奥已经推出一年了，去年开发者大会的奥利奥新特性册子上也写到了通知的更改，虽然以往的版本很少有关于通知的改动，但是这次的变化还是很大的，官方文档中也比较突出的描述了。在API26及以上的版本需要适配，不然就收不到通知。我们小组上次的版本就没有注意，被反馈回来才知道没有适配。</p>
 <a id="more"></a>
-<h3 id="1-let-and-run-变换"><a href="#1-let-and-run-变换" class="headerlink" title="1. let and run 变换"></a>1. let and run 变换</h3><ol>
-<li>变换，举个孙悟空的例子。</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1454742-3da93207be27c1e2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="孙悟空"></p>
-<p>孙悟空学会了七十二变，变成哮天犬。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1454742-57a0cd7b126e9b9e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="哮天犬"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Monkey</div><div class="line">class Dog</div><div class="line"></div><div class="line">fun changeDog(m: Monkey): Dog &#123;</div><div class="line">    // 变成了狗</div><div class="line">    return Dog()</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val monkey: Monkey = Monkey()</div><div class="line">    val dog: Dog = changeDog(monkey)</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>从孙悟空变成了哮天犬，这是类型转换。这时候我们用 <em>run</em> 写一下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val monkey: Monkey = Monkey()</div><div class="line">val dog: Dog = monkey.run &#123; changeDog(this) &#125;</div></pre></td></tr></table></figure>
-<p>再用 <em>let</em> 这样写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val monkey: Monkey = Monkey()</div><div class="line">val dog: Dog = monkey.let &#123; changeDog(it) &#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>Function definition<br>现在我们知道了怎么使用，看看 <em>Standard.kt</em> 对于 <em>let</em> 和 <em>run</em> 的定义：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">public inline fun &lt;T, R&gt; T.let(block: (T) -&gt; R): R = block(this)</div><div class="line">public inline fun &lt;T, R&gt; T.run(block: T.() -&gt; R): R = block()</div></pre></td></tr></table></figure>
-<p>第一次看很难理解，我们先看返回值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">fun createNotification() &#123;</div><div class="line">     val builder = NotificationCompat.Builder(this)</div><div class="line"></div><div class="line">     val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)</div><div class="line">     //设置大图标</div><div class="line">     builder.setLargeIcon(bitmap)</div><div class="line">     //设置小图标</div><div class="line">     builder.setSmallIcon(R.drawable.depu)</div><div class="line">     //设置标题</div><div class="line">     builder.setContentTitle(&quot;这是标题,id=$id&quot;)</div><div class="line">     //设置正文</div><div class="line">     builder.setContentText(&quot;这是正文&quot;)</div><div class="line">     //设置摘要</div><div class="line">     builder.setSubText(&quot;这是摘要&quot;)</div><div class="line">     //显示指定文本</div><div class="line">     builder.setContentInfo(&quot;这是info&quot;)</div><div class="line">     //设置是否点击消息后自动clean</div><div class="line">     builder.setAutoCancel(true)</div><div class="line">     //可以设置对消息的计数，位置和setContentInfo一样，设置setContentInfo过则setNumber失效</div><div class="line">     builder.setNumber(msgNumbe)</div><div class="line">     //状态栏显示时的文本</div><div class="line">     builder.setTicker(&quot;在状态栏上显示的文本&quot;)</div><div class="line">     //设置优先级,影响出现在通知栏的排序</div><div class="line">     builder.priority = NotificationCompat.PRIORITY_HIGH</div><div class="line">     //设置显示的时间，可以自定义</div><div class="line">     builder.setWhen(System.currentTimeMillis())</div><div class="line">     //true代表正在进行的通知，此时用户无法清除通知</div><div class="line">     builder.setOngoing(true)</div><div class="line"></div><div class="line">     //设置消息的提醒方式，震动提醒：DEFAULT_VIBRATE     声音提醒：NotificationCompat.DEFAULT_SOUND</div><div class="line">     //三色灯提醒NotificationCompat.DEFAULT_LIGHTS     以上三种方式一起：DEFAULT_ALL</div><div class="line">     builder.setDefaults(NotificationCompat.DEFAULT_SOUND)</div><div class="line">     //设置震动方式，延迟零秒，震动一秒，延迟一秒、震动一秒</div><div class="line">     builder.setVibrate(longArrayOf(0, 1000, 1000, 1000))</div><div class="line"></div><div class="line">     val intent = Intent(this, ShowActivity::class.java)</div><div class="line">     val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)</div><div class="line">     //设置意图</div><div class="line">     builder.setContentIntent(pendingIntent)</div><div class="line"></div><div class="line">     val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager</div><div class="line">     notificationManager.notify(id, builder.build())</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>这是之前写的介绍Notifications的文章，虽然是kotlin语言，运行还是很好，但是如果我们在Oreo设备上运行（8.0，API 26或8.1，API 27），则不会出现通知。而且，如果我们在Android Studio中查看代码，我们可以看到Builder 已经被弃用，lint也给我们指出错误。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-07177ac52de9e866.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lint"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-16205cbd745e8e82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="废弃"></p>
+<p>从奥利奥8.0（API 26）开始，所有通知必须关联到通道，否则将不会显示。我们在代码中使用的Builder构造函数是Oreo之前不支持Channels的构造函数，因此它被弃用。</p>
+<p>在奥利奥通知必须归入通知渠道（Notification Channels）是方便用户更好地控制他们看到的通知。这里的控制指以下几个属性：</p>
+<p>当用户修改任何下列特性的行时，修改将作用于通知渠道：</p>
 <ul>
-<li>R 是函数的返回值 </li>
-<li>T 是调用者的类型</li>
+<li>重要性</li>
+<li>声音</li>
+<li>灯光</li>
+<li>振动</li>
+<li>在锁屏上显示</li>
+<li>替换免打扰模式</li>
 </ul>
-<p>就是说 <em>let</em> 、<em>run</em> 是把T类型转化为R类型。就像例子中的孙悟空变为哮天犬。</p>
-<ol>
-<li>需要类型转化的时候用 <em>let</em> 和 <em>run</em>。</li>
-</ol>
-<h3 id="2-apply-和-also-不转化类型"><a href="#2-apply-和-also-不转化类型" class="headerlink" title="2.apply 和 also 不转化类型"></a>2.apply 和 also 不转化类型</h3><ol>
-<li>孙悟空的例子。<br>孙悟空遇见的唐僧，带上了紧箍咒。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-3da93207be27c1e2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="孙悟空"></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">class Monkey&#123;</div><div class="line"></div><div class="line">    fun  getHeadwear()&#123;</div><div class="line">        //带上了紧箍咒</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val monkey: Monkey = Monkey()</div><div class="line">    monkey.getHeadwear()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/1454742-cdd4ae890d58b057.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="紧箍咒"></p>
-<p>带了紧箍咒之前是猴子，之后也是猴子。<br>用apply重写：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val monkey: Monkey = Monkey()</div><div class="line">monkey.apply &#123; getHeadwear() &#125;</div></pre></td></tr></table></figure>
-<p>也可以用also：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val monkey: Monkey = Monkey()</div><div class="line">monkey.also &#123; it.getHeadwear() &#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>Function definition<br> 看看Standard.kt如何定义apply和also的：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">public inline fun &lt;T&gt; T.apply(block: T.() -&gt; Unit): T &#123; block(); return this &#125;</div><div class="line">public inline fun &lt;T&gt; T.also(block: (T) -&gt; Unit): T &#123; block(this); return this &#125;</div></pre></td></tr></table></figure>
-<p>注意，这两个函数没有 <em>R</em>,自始至终都只有一个 <em>T</em> 类型，因为T在调用这个函数之后依然返回的是T本身。孙悟空带了紧箍咒还是孙悟空。</p>
-<ol>
-<li>没有类型转换的时候用 <em>apply</em> 和 <em>also</em></li>
-</ol>
-<h3 id="觉得他们不好记，kotlin-允许我们用-import-去重命名方法。"><a href="#觉得他们不好记，kotlin-允许我们用-import-去重命名方法。" class="headerlink" title="觉得他们不好记，kotlin 允许我们用 import  去重命名方法。"></a>觉得他们不好记，<em>kotlin</em> 允许我们用 <em>import</em>  去重命名方法。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import kotlin.apply as perform</div><div class="line">import kotlin.run as transform</div><div class="line">import kotlin.also as performIt</div><div class="line">import kotlin.let as transformIt</div></pre></td></tr></table></figure>
-<ul>
-<li>如果类型不变换, 就用 <em>perform()</em> 或者 <em>performIt()</em></li>
-<li>如果类型变化了, 就用 <em>transform()</em> 或者 <em>transformIt()</em> </li>
-</ul>
-<p>比如我们创建一个文件，并且配置它可以读写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">val file = File(&quot;path&quot;)</div><div class="line">file.setReadable(true)</div><div class="line">file.setExecutable(true)</div><div class="line">file.setWritable(true)</div></pre></td></tr></table></figure>
-<p>配置了文件可以读写，但是文件还是文件，没有发生类型转化，这时候我们可以用 <em>perform</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">file.perform &#123;</div><div class="line">     setReadable(true)</div><div class="line">     setExecutable(true)</div><div class="line">     setWritable(true)</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p>当然也可以使用 <em>performIt</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">file.performIt &#123;</div><div class="line">    it.setReadable(true)</div><div class="line">    it.setExecutable(true)</div><div class="line">    it.setWritable(true)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>为 <em>recyclerview</em> 配置 <em>adapter</em> ，设置分割线等都可以使用 <em>perform</em></p>
-<p><em>fragment</em> inflate 布局的时候， 可以用 <em>transformIt</em>，就不举例了</p>
-<p>其他的例子就不一一举例了，看下面的图，相信你能判断怎么使用：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1454742-4b4537abeb1a8916.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择"></p>
-<p>参考 ：<a href="https://medium.com/@elye.project/mastering-kotlin-standard-functions-run-with-let-also-and-apply-9cd334b0ef84" target="_blank" rel="external">https://medium.com/@elye.project/mastering-kotlin-standard-functions-run-with-let-also-and-apply-9cd334b0ef84</a></p>
+<p>下面在奥利奥上创建一个渠道通知：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">fun createNotificationChannel() &#123;</div><div class="line">       val id = 0x6e</div><div class="line">       val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE)as NotificationManager</div><div class="line"></div><div class="line">       // 通知渠道的id</div><div class="line">       val channelId = &quot;渠道ID&quot;</div><div class="line">       // 用户可以看到的通知渠道的名字.</div><div class="line">       val channelName = &quot;渠道名字&quot;</div><div class="line">       // 用户可以看到的通知渠道的描述</div><div class="line">       val channelDesc = &quot;渠道描述&quot;</div><div class="line">       // 优先级</div><div class="line">       val importance = NotificationManager . IMPORTANCE_HIGH;</div><div class="line"></div><div class="line">       val channel =  NotificationChannel(channelId, channelName, importance)</div><div class="line"></div><div class="line">       // 配置通知渠道的属性</div><div class="line">       channel.description = channelDesc</div><div class="line">       // 设置通知出现时红色闪灯</div><div class="line">       channel.enableLights(true)</div><div class="line">       channel.lightColor = Color.RED</div><div class="line"></div><div class="line">       notificationManager.createNotificationChannel(channel)</div><div class="line"></div><div class="line">       val notification =  Notification.Builder(this,channelId)</div><div class="line">               .setContentTitle(&quot;我是标题&quot;)</div><div class="line">               .setContentText(&quot;我是内容&quot;)</div><div class="line">               .setSmallIcon(R.mipmap.comments)</div><div class="line">               .build()</div><div class="line"></div><div class="line">       notificationManager.notify(id,notification)</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-e861b244c6718742.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="弹出的样式"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-6f4b4f69b9ab3d61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点开"></p>
+<p>右边的switch滑动关闭，点击下面的完成，不能再收到这类通知。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-48bbce249c5876c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="所有类别"></p>
+<p>在所有类别里设置属性。</p>
+<p>如果创建了2个通知 ，2个channel，其中2个channel的id一样，那么后创建的channel会覆盖前一个。显示2个通知，一个渠道。</p>
+<h6 id="更新通知渠道设置"><a href="#更新通知渠道设置" class="headerlink" title="更新通知渠道设置"></a>更新通知渠道设置</h6><p>一旦创建了通知渠道，其设置和行为就由用户掌控，如果用户对通知设置过，可以通过getNotificationChannel（id）来获取channel的状态。如果想让用户更改回来，需要提供通知渠道的 ID 和应用的包名。如下代码会跳转到渠道的设置页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);</div><div class="line">intent.putExtra(Settings.EXTRA_CHANNEL_ID,mChannel.getId());</div><div class="line">intent.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());startActivity(intent);</div></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-343d1ded3d432135.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="设置"></p>
+<p>如果测试过渠道，即使换了渠道id也会就会保留在应用中，所以需要删除渠道名，或者卸载应用。</p>
 
       
 
@@ -278,7 +248,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">kotlin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Notification</a>
         		</li>
       		
 		</ul>
@@ -334,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/31/run, with, let, also and apply傻傻分不清楚/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/04/13/Android Oreo的通知特性/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,18 +318,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/13/Android Oreo的通知特性/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Android Oreo的通知特性
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/22/格式化你的 git message/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">格式化你的 git message</div>
+    <a href="/2018/03/31/run, with, let, also and apply傻傻分不清楚/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">run, with, let, also and apply傻傻分不清楚</div>
       <i class="icon-circle-right"></i>
     </a>
   
