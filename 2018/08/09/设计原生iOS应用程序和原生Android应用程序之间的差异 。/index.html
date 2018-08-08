@@ -6,17 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2004/10 | A_si的博客</title>
+  <title>译：设计原生iOS应用程序和原生Android应用程序之间的差异 | A_si的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android dev">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A_si的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2004/10/index.html">
+  <meta name="description" content="原文地址：https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca原文作者：SteelKiwi Inc. 要创建最佳的原生应用程序设计，您应该牢记iOS和Android平台之间的差异。这些平台不仅在原生应用程序的外观方面有所不同; 它们在结构和交互">
+<meta name="keywords" content="design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="译：设计原生iOS应用程序和原生Android应用程序之间的差异">
+<meta property="og:url" content="http://yoursite.com/2018/08/09/设计原生iOS应用程序和原生Android应用程序之间的差异 。/index.html">
 <meta property="og:site_name" content="A_si的博客">
-<meta property="og:description" content="Android dev">
+<meta property="og:description" content="原文地址：https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca原文作者：SteelKiwi Inc. 要创建最佳的原生应用程序设计，您应该牢记iOS和Android平台之间的差异。这些平台不仅在原生应用程序的外观方面有所不同; 它们在结构和交互">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-1d1f7c169260b737.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-f1a3db047be3609e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-1d8cc9a245f9dde7.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-8f3c108bfcf9c388.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-611903352469e5ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-efd5a3bc36bb17ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-abab2c63f567126e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-7b85cc7649ac2351.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-c8c237dd492cc96c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-60c697f4543fc25c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-a35563d2beb827c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-6510e36aee54d9e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-8334b3317756c683.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-5b1d9c8aa42b8cf4.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-e2b2e51c4892c05d.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-c888800f01ceb887.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1454742-25cdd1872f0269e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-08-08T17:20:46.874Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A_si的博客">
-<meta name="twitter:description" content="Android dev">
+<meta name="twitter:title" content="译：设计原生iOS应用程序和原生Android应用程序之间的差异">
+<meta name="twitter:description" content="原文地址：https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca原文作者：SteelKiwi Inc. 要创建最佳的原生应用程序设计，您应该牢记iOS和Android平台之间的差异。这些平台不仅在原生应用程序的外观方面有所不同; 它们在结构和交互">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1454742-1d1f7c169260b737.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="A_si的博客" type="application/atom+xml">
   
@@ -156,71 +176,221 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-设计原生iOS应用程序和原生Android应用程序之间的差异 。" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2004" class="archive-year">2004</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2004/10/13/2017-10/" class="archive-article-date">
-  	<time datetime="2004-10-12T23:50:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2004-10-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2004/10/13/2017-10/">摇滚十年</a>
+    <h1 class="article-title" itemprop="name">
+      译：设计原生iOS应用程序和原生Android应用程序之间的差异
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/09/设计原生iOS应用程序和原生Android应用程序之间的差异 。/" class="archive-article-date">
+  	<time datetime="2018-08-08T17:18:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca" target="_blank" rel="external">原文地址</a>：<a href="https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca" target="_blank" rel="external">https://medium.muz.li/differences-between-designing-native-ios-apps-and-native-android-apps-e71256dfa1ca</a><br>原文作者：SteelKiwi Inc.</p>
+<p>要创建最佳的原生应用程序设计，您应该牢记iOS和Android平台之间的差异。这些平台不仅在原生应用程序的外观方面有所不同; 它们在结构和交互方面也有所不同。您需要牢记这些差异，以通过原生应用程序设计给用户提供最佳用户体验。</p>
+<p>iOS和Android的原生移动应用程序具有各自操作系统平台特殊的功能。Apple和Google的设计指南建议尽可能使用平台标准导航控件：页面控件，选项卡，分类控件，表视图，组合视图和拆分视图。用户熟悉这些控件是如何在每个平台上运行的，因此如果您使用标准控件，您的用户将直观地知道如何操作您的应用程序。我们专注于iOS和Android上的交互设计模式之间的主要区别，以阐明iOS和Android上的应用程序看起来不同的原因 - 以及它们为什么应该这样做。我们还提供原生应用程序设计模板和原生移动应用程序示例，以帮助您可视化我们正在谈论的内容。</p>
+<a id="more"></a>
+<h4 id="导航模式的差异"><a href="#导航模式的差异" class="headerlink" title="导航模式的差异"></a>导航模式的差异</h4><p>在屏幕之间跳转是移动应用程序中的常见操作。在设计导航模式方面，考虑到iOS和Android不同的应用程序设计指南是非常重要的。Android设备底部有一个通用导航栏。使用导航栏中的后退按钮非常简便的返回上一个屏幕或步骤，它几乎适用于所有Android应用程序。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-1d1f7c169260b737.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全局导航条(Android)"></p>
+<p>另一方面，Apple的设计方法却截然不同。没有全局导航栏，因此我们无法使用原生iOS应用程序设计中的全局后退按钮返回。这会影响iOS移动应用程序的设计。屏幕内部应该有一个左上角是一个返回按钮的原生导航栏。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-f1a3db047be3609e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="返回按钮(iOS)"></p>
+<p>Apple还在应用程序中引入从左到右的滑动手势，以跳转到上一个屏幕。此手势几乎适用于所有应用。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-1d8cc9a245f9dde7.gif?imageMogr2/auto-orient/strip" alt="从左向右滑动手势 - 返回（iOS）"></p>
+<p>在这种情况下，iOS和Android之间的区别在于，在iOS设备上的原生应用程序中，从左向右滑动手势将返回到上一个屏幕。相同手势在Android设备上通常用于切换选项卡。但与iOS不同的是，Android设备上有一个底部导航栏，后面的按钮会返回上一个屏幕。</p>
+<p>记住平台之间的这种差异以保持与其他移动应用程序的一致性始终很重要。<br><img src="https://upload-images.jianshu.io/upload_images/1454742-8f3c108bfcf9c388.gif?imageMogr2/auto-orient/strip" alt="从左向右滑动手势 - 在标签之间切换（Android）"></p>
+<h4 id="iOS和Android中应用内导航模式有所不同"><a href="#iOS和Android中应用内导航模式有所不同" class="headerlink" title="iOS和Android中应用内导航模式有所不同"></a>iOS和Android中应用内导航模式有所不同</h4><p><a href="https://material.io/develop/android/" target="_blank" rel="external">“Material Design Guidelines”</a>中有一些不同的导航选项。Android应用程序中使用的一个众所周知的导航模式是抽屉导航和选项卡的组合。</p>
+<p>抽屉导航是一个通过点击汉堡菜单图标从左侧或右侧滑入的菜单。选项卡位于屏幕标题的正下方，内容组织处于较高级别，允许用户在应用中切换不同的视图，数据集和功能。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-611903352469e5ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左—抽屉导航菜单， 右—选项卡"></p>
+<p>Material Design中还有一个名为bottom navigation的组件。此组件对于Material Design应用程序也很重要。底部导航栏使您可以轻松浏览和切换顶级视图。Material Design Guidelines不建议同时使用底部导航和选项卡，因为它可能会在导航时造成混淆。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-efd5a3bc36bb17ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="底部导航（材料设计）"></p>
+<p>在Apple的UI指南中，没有与抽屉导航菜单类似的标准导航控件。相反，Apple的指南建议将全局导航放在选项卡中。选项卡显示在应用程序屏幕的底部，可以在应用程序的主要类别之间快速切换。</p>
+<p>通常，选项卡包含的类别不超过五个。我们可以看到，此组件类似于Material Design中的底部导航，但更常用于iOS应用程序中。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-abab2c63f567126e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左上角 - iOS分段控制; 右下角 - iOS标签栏（HIG）"></p>
+<p>虽然在两个操作系统中都有类似的功能（选项卡和类别控制，底部导航和标签栏），但导航仍然是iOS和Android之间的主要区别之一。存在两个客观差异，例如Android中的全局导航栏及其在iOS中的缺乏，以及这两个系统的视觉差异。</p>
+<p>Apple认为主要导航元素应位于前台，汉堡包菜单应仅用于存储不是用户执行的日常任务的功能。不同的是，Android应用程序通常的做法是在汉堡菜单中隐藏主导航。</p>
+<h4 id="自定义标准控件需要额外的开发时间，并且对于用户来说是不熟悉的"><a href="#自定义标准控件需要额外的开发时间，并且对于用户来说是不熟悉的" class="headerlink" title="自定义标准控件需要额外的开发时间，并且对于用户来说是不熟悉的"></a>自定义标准控件需要额外的开发时间，并且对于用户来说是不熟悉的</h4><p>如果您希望应用程序中的每个元素在不同平台上看起来相同，那么您需要进行额外的开发工作才能创建最佳的移动应用程序设计。最复杂的用例涉及默认控件，如单选按钮，复选框，切换按钮等，并且需要自定义视图实现，以在iOS上显示类似iOS的控件或类似Android的控件。</p>
+<p>每个平台都有其独特的交互。在每个操作系统中尊重用户习惯的设计是良好的设计。在为iOS和Android设计移动应用程序时，牢记平台之间的差异非常重要，这样您就可以设计出满足用户期望的应用程序。</p>
+<p>在两个平台上的一个不同的元素的设计示例是日期选择器。Android用户不熟悉iOS中常见的老虎机卷轴式日期选择器。在Android中使用这种样式的日期选择器需要自定义视图，这可能会变得复杂，增加了开发的复杂性和持续时间，并使您的应用程序设计看起来与Android平台不同。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-7b85cc7649ac2351.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 - 标准iOS控件; 右 - 标准的Android控件"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-c8c237dd492cc96c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 - 标准iOS选择; 右 - 标准的Android选择"></p>
+<h4 id="iOS和Android中的按钮样式"><a href="#iOS和Android中的按钮样式" class="headerlink" title="iOS和Android中的按钮样式"></a>iOS和Android中的按钮样式</h4><p>“Material Design Guidelines”中有两种类型的按钮 - 平面和凸起。这些按钮用于不同的情况。Material Design中按钮上的文本通常都是大写的。有时我们在本机iOS应用程序中也会找到大写按钮文本，但通常我们找到的是标题大小写。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-60c697f4543fc25c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 - 标准材料设计按钮; 右 - 标准的HIG按钮"></p>
+<p>还有一种类型的按钮 - Android上的浮动操作按钮和iOS上的呼叫操作按钮。浮动操作按钮表示应用程序中的主要操作。例如，邮件应用程序中的撰写按钮或社交网络应用程序中的新帖子按钮可以是浮动操作按钮。iOS应用程序中主要操作的类似设计是行为按钮，该按钮位于标签栏的中心。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-a35563d2beb827c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左侧 - iOS中的标准CTA按钮; 右 - Android中的标准浮动操作按钮"></p>
+<h4 id="Android中的原生底部列表与iOS中的活动视图操作列表之间的差异"><a href="#Android中的原生底部列表与iOS中的活动视图操作列表之间的差异" class="headerlink" title="Android中的原生底部列表与iOS中的活动视图操作列表之间的差异"></a>Android中的原生底部列表与iOS中的活动视图操作列表之间的差异</h4><p>Android中有两种类型的底部列表：list列表和表格列表。list底部列表有两种类型的内容：具有不同情景操作的列表和在用户点击“共享”图标后显示的应用程序列表。我们可以在iOS活动视图操作列表中找到相同类型的内容。但这些组件看起来与Android底部列表不同。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-6510e36aee54d9e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 - 标准材料设计底部列表; 右 - iOS应用中的操作表"></p>
+<h4 id="分辨率的差异"><a href="#分辨率的差异" class="headerlink" title="分辨率的差异"></a>分辨率的差异</h4><p>iOS和Android的分辨率指南略有不同（iOS为44px @ 1x，Android为48dp / 48px @ 1x）。Material Design Guidelines还建议将所有元素与8dp方形基线网格对齐。</p>
+<h4 id="排版差异"><a href="#排版差异" class="headerlink" title="排版差异"></a>排版差异</h4><p>San Francisco是iOS中的系统字体。Roboto是Android中的标准字体。Noto是Chrome和Android不支持的所有语言的标准字体。您需要密切关注每个平台的排版和布局规范。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-8334b3317756c683.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 - 材料设计排版; 右 - HIG排版"></p>
+<h4 id="Microinteractions"><a href="#Microinteractions" class="headerlink" title="Microinteractions"></a>Microinteractions</h4><p>在设计方面，第一印象通常是用户的最后印象。</p>
+<p>这就是为什么从一开始就吸引用户的注意力如此重要。在应用程序设计和开发过程中，我们可以通过微交互和动画为用户创建一个非常着迷的体验。</p>
+<p>让我们明确关于两个平台的交互和动作的主要规则和建议，并查看详细示例。</p>
+<p>重点和重要性 - 交互将用户的注意力集中在应用程序中真正重要的内容上，因此只有在真正需要时才需要使用它们。两个平台都不鼓励过多的动画，因为它们会分散用户的注意力并使用户感到紧张。</p>
+<p>一致性和层次结构 - 请务必记住，交互通过显示元素彼此之间的关系来帮助用户在应用中定位自己。从一个屏幕到另一个屏幕的自然，流畅的过渡使用户保持沉浸其中。动作向导为如何执行操作提供了有用的建议。</p>
+<p>尽管使用微动画的基本建议在“Material Design Guidelines”和“人机交互指南”中非常相似，但仍有一些明确定义的差异。用户习惯于这些特定于平台的过渡，并觉得十分自然。</p>
+<p>这就是为什么要特别注意熟悉的交互是十分重要的，这将改善用户体验并在每个平台上看起来自然。</p>
+<h4 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h4><p>iOS用户习惯于iOS中使用的微妙动画，例如平滑过渡，设备方向的流畅变化和基于物理的移动。当移动没有意义或似乎违反物理定律时，iOS用户会感到迷失方向。例如，如果用户通过从屏幕顶部向下滑动来显示视图，则他们希望能够通过向后滑动来退出视图。HIG强烈建议，除非您正在创建诸如游戏之类的沉浸式体验，否则您可以使自定义过渡动画与内置动画相媲美。</p>
+<h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><p>根据“Material Design Guidelines”，在转换期间，转换的界面元素分为传出，传入或固定。项目所属的类别会影响其转换方式。</p>
+<p>动画引导用户注意。当UI改变外观时，动作在转换之前和之后提供元素的放置和外观之间的连续性。导航转换是与界面进行整体交互的重要元素。它们通过表达应用程序的层次结构帮助用户定位自己。例如，当元素扩展以填充整个屏幕时，扩展行为表示新屏幕是子元素。它展开的屏幕是它的父元素。</p>
+<p>导航转换是与界面进行整体交互的重要元素。它们通过表达应用程序的层次结构帮助用户定位自己。例如，当元素扩展以填充整个屏幕时，扩展行为表示新屏幕是子元素。它展开的屏幕是它的父元素。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-5b1d9c8aa42b8cf4.gif?imageMogr2/auto-orient/strip" alt="父级视图对子视图过渡的例子（Material Design Guidelines）"></p>
+<p>在父屏幕上，嵌入的子元素在触摸时会抬​​起并在适当的位置展开。</p>
+<p>过渡将重点放在子屏幕上，同时加强了父子视图之间的关系。</p>
+<p>共用相同父级的屏幕（例如相册中的照片，个人资料中的部分或流程中的步骤）一致地移动以加强他们的关系。视图从一侧滑入，同时同级的视图在相反方向上离开屏幕。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-e2b2e51c4892c05d.gif?imageMogr2/auto-orient/strip" alt="选项卡位于同一高度，并在水平方向上一起移动"></p>
+<p>在应用程序的顶层，选项通常被分组为主要任务（可能彼此不相关）。这些屏幕通过更改不透明度和比例等值来转换。</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>当然也有例外：一些iOS应用程序遵循Material Design Guidelines（如Gmail），一些Android应用程序遵循人机交互指南（如Instagram）。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-c888800f01ceb887.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左 — Gmail on iOS; 右 — Gmail on Android"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1454742-25cdd1872f0269e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左-Instagram on iO;右 -Instagram on Android"></p>
+<p>但有一点是显而易见的 - 使用原生组件为两个操作系统设计移动应用程序要快得多。因此，最好花时间对应不同的系统平台设计而不是开发一个应用程序模型，因为一个应用程序模型是Apple的人机交互指南和Google的Material Design组件的混合，然后由于自定义元素而花费大量时间进行开发。</p>
+<p>想要查看本机设计应用示例，其中我们使用本机元素以及具有强大样式的自定义界面？访问我们的<a href="https://dribbble.com/steelkiwi" target="_blank" rel="external">Dribbble</a>和<a href="https://www.behance.net/steelkiwi" target="_blank" rel="external">Behance</a>页面，以更好地了解我们的能力。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">design</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/碎语//" class="article-tag-list-link color3">碎语</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/08/09/设计原生iOS应用程序和原生Android应用程序之间的差异 。/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/04/13/Android Oreo的通知特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android Oreo的通知特性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -243,8 +413,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
